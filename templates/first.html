@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Predicting Stock Market</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='icons8-stocks-color-hand-drawn-96.png') }}">
+  <link type="text/css" rel="stylesheet" href="../static/vendor/bootstraps/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/vendor/icofont/icofont.min.css">
+  <link rel="stylesheet" href="../static/vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="../static/vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../static/vendor/nivo-slider/css/nivo-slider.css">
+  <link rel="stylesheet" href="../static/vendor/owl.carousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="../static/vendor/venobox/venobox.css">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  <!-- =======================================================
+  * Template Name: eBusiness - v2.2.1
+  * Template URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <!-- self style -->
+  <link type="text/css" href="../static/css/self-style.css" rel="stylesheet">
+
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="{{url_for('first')}}"><span>stock</span>Market</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block navbar">
+        <ul>
+
+          <li class="nav-link active"><a href="#slider"
+              onclick="document.getElementById('upload').style.display='none'">Home</a></li>
+          {%if session['username']%}
+          <li class="nav-link"><a href="#abstract">Abstract</a></li>
+          <li class="nav-link"><a href="{{url_for('landing_function')}}">DashBoard</a></li>
+          <li class="nav-link"><a href="#abstract"
+              onclick="document.getElementById('upload').style.display='block'">Uploads</a></li>
+          <li class="nav-link"><a href="{{url_for('logout')}}">Logout</a></li>
+          {%else%}
+          <li class="nav-link"><a href="{{url_for('login')}}">Login</a></li>
+          <li class="nav-link"><a href="{{url_for('signup')}}">Signup</a></li>
+          {% endif %}
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Slider Section ======= -->
+  <section id="slider" class="slider-area">
+    <div class="bend niceties preview-2">
+      <div id="ensign-nivoslider" class="slide">
+        <img title="#slider-direction-0" src="../static/img/background/imag2.png" alt="">
+        <img title="#slider-direction-1" src="../static/img/slider/slider5.jpg" alt="" />
+        <img title="#slider-direction-2" src="../static/img/slider/slider6.jpg" alt="" />
+        <img title="#slider-direction-3" src="../static/img/slider/slider7.jpg" alt="" />
+        <img title="#slider-direction-4" src="../static/img/background/imag1.jpg" alt="">
+      </div>
+
+      <!-- direction 0 -->
+      <div id="slider-direction-0" class="slider-direction slider-one">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="slider-content">
+                <!-- layer 1 -->
+                <div class="layer-1-1 hidden-xs wow animate__slideInDown animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".2s">
+                  <h2 class="title1"> Predicting Stock Market Trends </h2>
+                </div>
+                <!-- layer 2 -->
+                <div class="layer-1-2 wow animate__fadeIn animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".2s">
+                  <h1 class="title2"> Using Machine
+                    Learning and Deep Learning Algorithms</h1>
+                </div>
+                <!-- layer 3 -->
+                <div class="layer-1-3 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".2s">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- direction 1 -->
+      <div id="slider-direction-1" class="slider-direction slider-one">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="slider-content">
+                <!-- layer 1 -->
+                <div class="layer-1-1 hidden-xs wow animate__slideInDown animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".2s">
+                  <h2 class="title1"> Predicting Stock Market Trends </h2>
+                </div>
+                <!-- layer 2 -->
+                <div class="layer-1-2 wow animate__fadeIn animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".2s">
+                  <h1 class="title2"> Using Machine
+                    Learning and Deep Learning Algorithms</h1>
+                </div>
+                <!-- layer 3 -->
+                <div class="layer-1-3 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".2s">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- direction 2 -->
+      <div id="slider-direction-2" class="slider-direction slider-two">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="slider-content text-center">
+                <!-- layer 1 -->
+                <div class="layer-1-1 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".2s">
+                  <h2 class="title1">Predicting Stock Market Trends </h2>
+                </div>
+                <!-- layer 2 -->
+                <div class="layer-1-2 wow animate__fadeIn animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".1s">
+                  <h1 class="title2"> Using Machine
+                    Learning and Deep Learning Algorithms</h1>
+                </div>
+                <!-- layer 3 -->
+                <div class="layer-1-3 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".2s">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- direction 3 -->
+      <div id="slider-direction-3" class="slider-direction slider-two">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="slider-content">
+                <!-- layer 1 -->
+                <div class="layer-1-1 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".2s">
+                  <h2 class="title1">Predicting Stock Market Trends</h2>
+                </div>
+                <!-- layer 2 -->
+                <div class="layer-1-2 wow animate__fadeIn animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".1s">
+                  <h1 class="title2"> Using Machine
+                    Learning and Deep Learning Algorithms</h1>
+                </div>
+                <!-- layer 3 -->
+                <div class="layer-1-3 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s"
+                  data-wow-delay=".2s">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- direction 4 -->
+    <div id="slider-direction-4" class="slider-direction slider-two">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="slider-content">
+              <!-- layer 1 -->
+              <div class="layer-1-1 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s"
+                data-wow-delay=".2s">
+                <h2 class="title1">Predicting Stock Market Trends</h2>
+              </div>
+              <!-- layer 2 -->
+              <div class="layer-1-2 wow animate__fadeIn animate__animated" data-wow-duration="2s" data-wow-delay=".1s">
+                <h1 class="title2"> Using Machine
+                  Learning and Deep Learning Algorithms</h1>
+              </div>
+              <!-- layer 3 -->
+              <div class="layer-1-3 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s"
+                data-wow-delay=".2s">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- End Slider -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <main id="main">
+
+    <div id="upload" class="modal">
+      <span onclick="document.getElementById('upload').style.display='none'" class="upload-close"
+        title="Close Modal">&times;</span>
+      <form action="{{url_for('preview')}}" name="fs" id="fs" method="post" enctype=multipart/form-data>
+        <div class="upload-frame">
+          <div class="upload-center">
+            <div class="upload-title">
+              <h1 class="upload-h1">Drop file to upload Browse</h1>
+            </div>
+
+            <div class="upload-dropzone">
+              <img src="../static/img/upload-svgrepo-com.svg" alt="" class="upload-icon" />
+              <input type="file" class="upload-input" name="datasetfile" id="file1" required />
+            </div>
+
+            <input type="submit" class="upload-btn" name="uploadbutton" value="Upload File" />
+      </form>
+    </div>
+    </div>
+    </div>
+
+    <!-- ======= Abstract Section ======= -->
+    <div id="abstract" class="about-area area-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2>Abstract</h2>
+            </div>
+
+            <p>The nature of stock market movement has always been ambiguous for investors because
+              of various influential factors. 
+              This study aims to significantly reduce the risk of trend prediction with
+              machine learning and deep learning algorithms. 
+              Four stock market groups, namely diversified financials,
+              petroleum, non-metallic minerals and basic metals from Tehran stock exchange, are chosen for experimental
+              evaluations.
+              
+              This study compares nine machine learning models (Decision Tree, Random Forest, Adaptive
+              Boosting (Adaboost), eXtreme Gradient Boosting (XGBoost), Support Vector Classifier (SVC), Naïve
+              Bayes, K-Nearest Neighbors (KNN), Logistic Regression and Artificial Neural Network (ANN)) and two
+              powerful deep learning methods (Recurrent Neural Network (RNN) and Long short-term memory (LSTM).
+
+              Ten technical indicators from ten years of historical data are our input values, and two ways are supposed
+              for
+              employing them. Firstly, calculating the indicators by stock trading values as continuous data, and
+              secondly
+              converting indicators to binary data before using. Each prediction model is evaluated by three metrics
+              based
+              on the input ways. 
+              
+              The evaluation results indicate that for the continuous data, RNN and LSTM outperform
+              other prediction models with a considerable difference. Also, results show that in the binary data
+              evaluation,
+              those deep learning methods are the best; however, the difference becomes less because of the noticeable
+              improvement of models’ performance in the second way.
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- End col-->
+    </div>
+    <!-- End Abstract Section -->
+
+  </main>
+  <!-- End #main -->
+
+  <!-- add footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/jquerys/jquery.min.js"></script>
+  <script src="../static/vendor/bootstraps/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/jquery.easings/jquery.easing.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+  <script src="../static/vendor/appear/jquery.appear.js"></script>
+  <script src="../static/vendor/knob/jquery.knob.js"></script>
+  <script src="../static/vendor/parallax/parallax.js"></script>
+  <script src="../static/vendor/wow/wow.min.js"></script>
+  <script src="../static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/vendor/nivo-slider/js/jquery.nivo.slider.js"></script>
+  <script src="../static/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="../static/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('upload');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>

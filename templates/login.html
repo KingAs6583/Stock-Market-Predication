@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>login</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='icons8-stocks-color-hand-drawn-96.png') }}">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/bootstraps/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="../static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../static/vendor/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" rel="stylesheet">
+
+  <style>
+    .round-shape {
+      border-radius: 20px;
+    }
+
+    .round-shape:hover {
+      opacity: 0.9;
+    }
+
+    .login-page {
+      padding: 120px 0px;
+      margin: auto;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="{{url_for('first')}}"><span>stock</span>Market</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block ">
+        <ul>
+          <li class="nav-link "><a href="{{url_for('first')}}">Home</a></li>
+          <li class="nav-link active"><a href="{{url_for('login')}}">Login</a></li>
+        </ul>
+      </nav>
+      <!-- .nav-menu -->
+
+    </div>
+  </header>
+  <!-- End Header -->
+
+
+  <!-- ======= Main Slider Section ======= -->
+  <div class=" header-bg page-area ">
+    <div class="row">
+      <div class="col-md-5 col-sm-12 col-xs-12 login-page">
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close" onclick="close_alert()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+
+
+        <form class="control-group " style="top: 50%;" action="{{url_for('login')}}" method="post">
+
+          <div class="section-headline text-center">
+            <h2 class="text-white">Login</h2>
+          </div>
+
+          <input type="text" placeholder="Username" name="uname" id="uname" class="form-control round-shape" required>
+          <br>
+
+          <input type="password" placeholder="Password" name="psw" id="psw" class="form-control round-shape" required>
+          <br>
+
+          <input type="submit" class="btn btn-primary round-shape" value="Login"
+            style="margin : 0 auto; display: flex; justify-self: center;">
+          <br>
+
+          <span class="psw text-white text-right" style="text-align: right;">Forgot <a href="#">password?</a></span>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../static/js/main.js"></script>
+  <script src="../static/vendor/jquerys/jquery.min.js"></script>
+  <script src="../static/vendor/bootstraps/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    addEventListener("load", function () {
+      setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+
+    function close_alert() { $(".alert").alert('close') }
+
+  </script>
+
+</body>
+
+</html>
